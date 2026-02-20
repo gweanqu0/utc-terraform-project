@@ -2,7 +2,7 @@
  resource "aws_security_group" "alb_sg" {
   name        = "alb-sg-dev"
   description = "ALB Security Group"
-  vpc_id      = aws.vpc_id
+  vpc_id      = aws_vpc.utc_vpc.id
 
   ingress {
     description = "Allow HTTP"
